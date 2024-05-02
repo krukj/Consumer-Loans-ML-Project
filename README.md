@@ -18,7 +18,8 @@ A Machine Learning project with data analysis and feature prediction.
 ```
 Consumer-Loans-ML-Project/
   ├── data/                       # Raw data
-  ├── exploratory-data-analysis/  # Data analysis         
-  ├── feature-engineering         # Pre-processing, feature engineering, pipelines, models
+  ├── exploratory_data_analysis/  # Data analysis         
+  ├── feature_engineering         # Pre-processing, feature engineering, pipelines
+  ├── modeling                    # Models, hyperparameters tuning
   └── README.md                   # This file
 ```

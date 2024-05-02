@@ -81,6 +81,25 @@ class MyImputer(BaseEstimator, TransformerMixin):
         
         return X_copy
 
+class MyImputerNew(BaseEstimator, TransformerMixin):
+    def __init__(self, cols_mode_imputation):
+        self.modes = {}
+        self.cols_mode_imputation = cols_mode_imputation
+
+    def fit(self, X, y=None):
+        for col_name in self.cols_mode_imputation:
+            self.modes[col_name] = X[col_name].mode()[0]
+
+        return self
+
+    def transform(self, X):
+        X_copy = X.copy()
+
+        for col_name in self.cols_mode_imputation:
+            X_copy[col_name] = X[col_name].replace('Missing', self.modes[col_name])
+
+        return X_copy
+
 # Encoder for categorical variables handling both ordered and unordered ones
 class MyEncoder(BaseEstimator, TransformerMixin):
     def __init__(self, cat_features_wo_order, cat_feature_with_order, categories_order):
