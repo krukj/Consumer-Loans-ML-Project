@@ -8,18 +8,21 @@ A Machine Learning project with data analysis and feature prediction.
 
  ## Used technologies 
 - programming language: **Python**
-- used technologies and libraries:
-  - numpy
-  - pandas
-  - seaborn, matplotlib
-  - sklearn
+- libraries:
+  - data manipulation: ```pandas, numpy```
+  - data visualisation: ```seaborn, matplotlib```
+  - machine learning: ```sklearn, shap```
 
 ## Project structure
 ```
 Consumer-Loans-ML-Project/
   ├── data/                       # Raw data
   ├── exploratory_data_analysis/  # Data analysis         
-  ├── feature_engineering         # Pre-processing, feature engineering, pipelines
+  ├── feature_engineering/        # Pre-processing, feature engineering, pipelines
+  ├── interpretability/           # Model interpretation (shap)
   ├── modeling                    # Models, hyperparameters tuning
-  └── README.md                   # This file
+  │   └── best_models/            # txt files with metrics of the best models
+  ├── README.md                   # This file
+  └── results.pdf                 # Final presentation of the results
 ```
+*The project was made for the Introduction to Machine Learning curse during the 4th semester of the Data Science program at the Faculty of Mathematics and Information Systems, Warsaw University of Technology*
